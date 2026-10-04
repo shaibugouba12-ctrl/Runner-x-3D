@@ -2,97 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0,
-                   maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>RUNNER X 3D</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <script type="importmap">
-    {
-        "imports": {
-            "three": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js"
-        }
-    }
-    </script>
 </head>
 
 <body>
 
-<div id="loading">
-    <div>RUNNER X 3D</div>
-    <small>Loading...</small>
+<div id="hud">
+    <div>🏃 RUNNER X</div>
+    <div>Score: <span id="score">0</span></div>
+    <div>🪙 <span id="coins">0</span></div>
 </div>
 
 <div id="menu">
-    <h1>🏃 RUNNER X</h1>
-    <p>3D ENDLESS RUNNER</p>
-
-    <button id="startButton">▶ START RUN</button>
-
-    <p class="small">
-        Swipe ◀ ▶ to move<br>
-        Swipe ▲ to jump<br>
-        Swipe ▼ to slide
-    </p>
+    <h1>RUNNER X 3D</h1>
+    <p>ENDLESS RUNNER</p>
+    <button id="startButton">▶ START GAME</button>
 </div>
-
-<div id="hud">
-
-    <div class="top-bar">
-        <div>
-            SCORE
-            <strong id="score">0</strong>
-        </div>
-
-        <div>
-            COINS
-            <strong id="coins">0</strong>
-        </div>
-
-        <div>
-            DISTANCE
-            <strong id="distance">0m</strong>
-        </div>
-    </div>
-
-    <div id="powerup">⚡</div>
-
-    <button id="pauseButton">Ⅱ</button>
-
-</div>
-
-<div id="message"></div>
 
 <div id="gameOver">
-
     <h1>GAME OVER</h1>
-
-    <p>Score</p>
-    <strong id="finalScore">0</strong>
-
-    <p>Best</p>
-    <strong id="bestScore">0</strong>
-
+    <p>Score: <span id="finalScore">0</span></p>
     <button id="restartButton">🔄 PLAY AGAIN</button>
-
 </div>
 
 <div id="controls">
-
     <button id="leftButton">◀</button>
-
     <button id="jumpButton">▲</button>
-
-    <button id="slideButton">▼</button>
-
     <button id="rightButton">▶</button>
-
 </div>
 
-<script type="module" src="script.js"></script>
+<!-- Three.js -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.min.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
